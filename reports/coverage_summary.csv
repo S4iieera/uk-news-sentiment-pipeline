@@ -1,0 +1,5 @@
+run_id,ticker,trading_days,days_with_news,coverage_pct
+pilot_v1,BP.L,21,14,0.6666666666666666
+pilot_v1,HSBA.L,21,9,0.42857142857142855
+pilot_v1_alias_v2,BP.L,21,14,0.6666666666666666
+pilot_v1_alias_v2,HSBA.L,21,9,0.42857142857142855

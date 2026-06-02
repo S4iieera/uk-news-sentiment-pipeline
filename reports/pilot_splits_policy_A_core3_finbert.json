@@ -1,0 +1,16 @@
+{
+  "run_id": "model_v2_core3_1y_vader_finbert_guardian",
+  "train_start": "2024-11-01",
+  "train_end": "2025-07-15",
+  "test_start": "2025-07-16",
+  "test_end": "2025-10-30",
+  "n_train_rows": 528,
+  "n_test_rows": 228,
+  "policy_name": "A",
+  "policy_params": {
+    "drop_no_news_days": false,
+    "min_ticker_coverage_pct": null
+  },
+  "policy_drop_no_news_days": false,
+  "policy_min_ticker_coverage_pct": null
+}

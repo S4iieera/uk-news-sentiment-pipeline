@@ -1,0 +1,3 @@
+run_id,candidate_ticker,trading_days,days_with_news,coverage_pct,median_articles_per_news_day,total_articles,news_item_rows,inspection_rows,query_expr
+pilot_v1_alias_v2_5tick_bakeoff_dge_1m,DGE.L,21,2,0.0952,1.5,3,3,3,"(""Diageo"" OR ""Diageo plc"")"
+pilot_v1_alias_v2_5tick_bakeoff_expn_1m,EXPN.L,21,1,0.0476,1.0,1,1,1,"(""Experian"" OR ""Experian plc"")"

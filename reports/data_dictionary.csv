@@ -1,0 +1,38 @@
+file,column,dtype,description_stub
+prices_daily.parquet,date,object,Trading day / feature day (local date).
+prices_daily.parquet,ticker,object,"Instrument ticker (e.g., HSBA.L)."
+prices_daily.parquet,open,float64,
+prices_daily.parquet,high,float64,
+prices_daily.parquet,low,float64,
+prices_daily.parquet,close,float64,
+prices_daily.parquet,adj_close,float64,
+prices_daily.parquet,volume,int64,
+prices_daily.parquet,source,object,
+news_items.parquet,provider,object,
+news_items.parquet,guardian_id,object,
+news_items.parquet,web_url,object,
+news_items.parquet,published_at_utc,"datetime64[ns, UTC]",
+news_items.parquet,published_at_london,"datetime64[ns, Europe/London]",Publish timestamp converted to Europe/London.
+news_items.parquet,assigned_date,object,
+news_items.parquet,ticker,object,"Instrument ticker (e.g., HSBA.L)."
+news_items.parquet,query_used,object,
+news_items.parquet,query_expr,object,
+news_items.parquet,item_hash,object,
+news_items.parquet,sent_vader,float64,
+news_items.parquet,vader_label,object,
+news_daily.parquet,ticker,object,"Instrument ticker (e.g., HSBA.L)."
+news_daily.parquet,assigned_date,object,
+news_daily.parquet,n_articles,int64,Number of news items aggregated into the day.
+news_daily.parquet,vader_mean,float64,
+news_daily.parquet,vader_sum,float64,
+news_daily.parquet,vader_std,float64,
+news_daily.parquet,pos,int64,
+news_daily.parquet,neg,int64,
+news_daily.parquet,neu,int64,
+news_clean.parquet,ticker,object,"Instrument ticker (e.g., HSBA.L)."
+news_clean.parquet,published_at_london,"datetime64[ns, Europe/London]",Publish timestamp converted to Europe/London.
+news_clean.parquet,local_date,object,Date portion of published_at_london.
+news_clean.parquet,effective_date,object,Cutoff-adjusted assigned date (after 16:30 -> t+1).
+news_clean.parquet,sha1,object,Deterministic item hash for de-duplication/provenance.
+features_daily.parquet,(missing),,File not present at time of dictionary generation.
+model_dataset.parquet,(missing),,File not present at time of dictionary generation.

@@ -1,0 +1,24 @@
+project:
+  run_id: "pilot_v1"
+  data_dir: "data"
+  timezone: "Europe/London"
+  cutoff_time: "16:30"   # after 16:30 -> assign to t+1 (strictly > 16:30)
+
+window:
+  start: "2024-11-01"
+  end: "2024-11-29"
+
+tickers:
+  - symbol: "HSBA.L"
+    name: "HSBC"
+    news_query: "\"HSBC\" OR \"HSBC Holdings\" OR \"HSBA\""
+  - symbol: "BP.L"
+    name: "BP"
+    news_query: "\"BP\" OR \"British Petroleum\""
+
+providers:
+  newsapi:
+    endpoint: "https://newsapi.org/v2/everything"
+    language: "en"
+    page_size: 100
+    sort_by: "publishedAt"

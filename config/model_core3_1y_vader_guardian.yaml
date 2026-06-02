@@ -1,0 +1,55 @@
+project:
+  run_id: "model_v1_core3_1y_vader_guardian"
+  data_dir: "data"
+  timezone: "Europe/London"
+  cutoff_time: "16:30"
+
+window:
+  start: "2024-11-01"
+  end: "2025-10-31"
+
+tickers:
+  - symbol: "HSBA.L"
+    name: "HSBC"
+    aliases:
+      - HSBC
+      - "HSBC Holdings"
+      - "HSBC Holdings plc"
+
+  - symbol: "BP.L"
+    name: "BP"
+    aliases:
+      - BP
+      - "BP plc"
+
+  - symbol: "AZN.L"
+    name: "AstraZeneca"
+    aliases:
+      - AstraZeneca
+      - "AstraZeneca plc"
+
+eval:
+  coverage_policies:
+    default: A
+    A:
+      drop_no_news_days: false
+      min_ticker_coverage_pct: null
+    B:
+      drop_no_news_days: true
+      min_ticker_coverage_pct: null
+    C:
+      drop_no_news_days: false
+      min_ticker_coverage_pct: 0.50
+
+providers:
+  guardian:
+    endpoint: "https://content.guardianapis.com/search"
+    page_size: 50
+    max_pages: 20
+    rate_limit_per_sec: 1.0
+
+  newsapi:
+    endpoint: "https://newsapi.org/v2/everything"
+    language: "en"
+    page_size: 100
+    sort_by: "publishedAt"

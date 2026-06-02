@@ -1,0 +1,65 @@
+project:
+  run_id: "pilot_v1_alias_v2_5tick_1m"
+  data_dir: "data"
+  timezone: "Europe/London"
+  cutoff_time: "16:30"   # after 16:30 -> assign to t+1 (strictly > 16:30)
+
+window:
+  start: "2024-11-01"
+  end: "2024-11-29"
+
+tickers:
+  - symbol: "HSBA.L"
+    name: "HSBC"
+    aliases:
+      - HSBC
+      - "HSBC Holdings"
+      - "HSBC Holdings plc"
+
+  - symbol: "BP.L"
+    name: "BP"
+    aliases:
+      - BP
+      - "BP plc"
+
+  - symbol: "AZN.L"
+    name: "AstraZeneca"
+    aliases:
+      - AstraZeneca
+      - "AstraZeneca plc"
+
+  - symbol: "ULVR.L"
+    name: "Unilever"
+    aliases:
+      - Unilever
+      - "Unilever plc"
+
+  - symbol: "RIO.L"
+    name: "Rio Tinto"
+    aliases:
+      - "Rio Tinto"
+      - "Rio Tinto plc"
+
+eval:
+  coverage_policies:
+    default: A
+    A:
+      drop_no_news_days: false
+      min_ticker_coverage_pct: null
+    B:
+      drop_no_news_days: true
+      min_ticker_coverage_pct: null
+    C:
+      drop_no_news_days: false
+      min_ticker_coverage_pct: 0.50
+
+providers:
+  guardian:
+    endpoint: "https://content.guardianapis.com/search"
+    page_size: 50
+
+  newsapi:
+    endpoint: "https://newsapi.org/v2/everything"
+    language: "en"
+    page_size: 100
+    sort_by: "publishedAt"
