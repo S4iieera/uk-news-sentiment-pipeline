@@ -20,7 +20,7 @@ from dashboard_io import (
 )
 
 
-st.set_page_config(page_title="FYP Dashboard", layout="wide")
+st.set_page_config(page_title="News Sentiment Dashboard", layout="wide")
 
 
 def _find_col(df: pd.DataFrame, candidates: list[str]) -> str | None:
@@ -533,7 +533,7 @@ def page_ticker_drilldown(run_id: str) -> None:
 
 
 def main() -> None:
-    st.sidebar.title("FYP Dashboard")
+    st.sidebar.title("News Sentiment Dashboard")
     run_id = _run_selector()
     page = _page_selector()
 

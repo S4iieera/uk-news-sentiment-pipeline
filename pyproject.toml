@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "fyp-news-sentiment"
+name = "uk-news-sentiment-pipeline"
 version = "0.1.0"
-description = "Reproducible UK news sentiment pipeline (Guardian + yfinance)"
+description = "Reproducible UK news sentiment pipeline with Guardian, yfinance, VADER, and FinBERT"
 requires-python = ">=3.11"
 
 [tool.setuptools.packages.find]
